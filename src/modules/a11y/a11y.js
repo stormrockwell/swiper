@@ -285,7 +285,7 @@ export default function A11y({ swiper, extendParams, on }) {
       params.id || wrapperEl.getAttribute('id') || `swiper-wrapper-${getRandomNumber(16)}`;
     const live = swiper.params.autoplay && swiper.params.autoplay.enabled ? 'off' : 'polite';
     addElId(wrapperEl, wrapperId);
-    addElLive(wrapperEl, live);
+    // addElLive(wrapperEl, live);
 
     // Slide
     initSlides();
@@ -313,7 +313,7 @@ export default function A11y({ swiper, extendParams, on }) {
     }
 
     // Tab focus
-    swiper.el.addEventListener('focus', handleFocus, true);
+    // swiper.el.addEventListener('focus', handleFocus, true);
     swiper.el.addEventListener('pointerdown', handlePointerDown, true);
     swiper.el.addEventListener('pointerup', handlePointerUp, true);
   };
@@ -340,7 +340,7 @@ export default function A11y({ swiper, extendParams, on }) {
     }
 
     // Tab focus
-    swiper.el.removeEventListener('focus', handleFocus, true);
+    // swiper.el.removeEventListener('focus', handleFocus, true);
     swiper.el.removeEventListener('pointerdown', handlePointerDown, true);
     swiper.el.removeEventListener('pointerup', handlePointerUp, true);
   }
